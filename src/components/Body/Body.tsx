@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; import './Body.css';
+import React, { useEffect, useState } from 'react'; import './Body.css';
 import { FaBars, FaTimes, FaRadiation, FaTwitter, FaDiscord, FaAngleRight } from 'react-icons/fa';
 import * as Exe from '../../tools/functions';
 import LetterDAO from '../../assets/Icons/LetterDAO'
@@ -30,7 +30,7 @@ const contentModal = {
 }
 
 const Body: React.FC<BodyProps> = ({ }) => {
-    const [hover_color, setHoverColor] = useState("#98D864"), [colorModal, setColorModal] = useState("#D9D3BD"),
+    const [hover_color, setHoverColor] = useState("#98D864"), [colorModal, setColorModal] = useState("#d9d3be"),
         [visible, setVisible] = useState("opacity-100"), [modalVisible, setModalVisible] = useState("opacity-0 invisible"),
         [contentModalVisible, setContentModalVisible] = useState("opacity-0 invisible"),
         [title, setTitle] = useState("None"), [subTitle, setSubTitle] = useState("None"),
@@ -55,25 +55,22 @@ const Body: React.FC<BodyProps> = ({ }) => {
                 setTitle(contentModal.letter.title);
                 setSubTitle(contentModal.letter.sub_title);
                 setDescription(contentModal.letter.description);
-                setColorModal("#D9D3BD");
                 break;
             case "council":
                 setTitle(contentModal.council.title);
                 setSubTitle(contentModal.council.sub_title);
                 setDescription(contentModal.council.description);
-                setColorModal("#D9D3BD");
                 break;
             case "committees":
                 setTitle(contentModal.committees.title);
                 setSubTitle(contentModal.committees.sub_title);
                 setDescription(contentModal.committees.description);
-                setColorModal("#D9D3BD");
                 break;
             case "dao":
                 setTitle(contentModal.dao.title);
                 setSubTitle(contentModal.dao.sub_title);
                 setDescription(contentModal.dao.description);
-                setColorModal("#DED100");
+                setColorModal("bg-y");
                 break;
             default:
                 break;
@@ -83,7 +80,9 @@ const Body: React.FC<BodyProps> = ({ }) => {
         setTimeout(() => { setModalVisible("opacity-100 visible") }, 500);
         setTimeout(() => { setContentModalVisible("opacity-100 visible") }, 700);
     }
-
+useEffect(() => {
+    setColorModal("#d9d3be");
+}, [])
     return (
         <div className='w-full flex items-center justify-center'>
             <div className='w-full md:w-[95%] max-w-[1300px] h-full flex items-center justify-center'>
@@ -171,7 +170,7 @@ const Body: React.FC<BodyProps> = ({ }) => {
 
                         <div className={`${modalVisible} transition-[opacity] ease-in-out duration-700 absolute w-[100%] left-0 md:left-auto  md:w-[78.37%] lg:w-[79.37%] h-[34rem] max-w-[1067px] flex flex-wrap`}>
                             <div className='w-full m-2 flex flex-col'>
-                                <div className={`w-full text-[#0F0D00] h-full border rounded-sm bg-[${colorModal}] hover:cursor-pointer`}>
+                                <div className={`w-full text-[#0F0D00] h-full border rounded-sm bg-modal-color hover:cursor-pointer`}>
                                     <div className={`${contentModalVisible} transition-[opacity] ease-in-out duration-700  h-full w-full`}>
                                         <div onClick={() => hidde()} className='relative z-10 left-[94%] sm:left-[96%] md:left-[96%] lg:left-[97%] top-[3%] w-4 hover:cursor-pointer'><FaTimes /></div>
 
