@@ -1,13 +1,14 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url(//db.onlinewebfonts.com/c/9fb1e7c5b973d399cb9f95667021667e?family=GT+America+Mono);
+@import url("https://fonts.cdnfonts.com/css/akira-expanded");
+@import url(//db.onlinewebfonts.com/c/bdfb9509197f3e9d0e05e3c1ed2cbafd?family=Stretch+Pro);
+@import url(//db.onlinewebfonts.com/c/011bf6877bf6908c6d43a19ccbb78154?family=Roboto+Mono);
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #0f0d00;
+  font-family: -apple-system, "League Mono", "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
