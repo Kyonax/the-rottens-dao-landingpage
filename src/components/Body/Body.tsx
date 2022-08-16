@@ -10,27 +10,31 @@ const contentModal = {
     letter: {
         title: "LETTER FROM KYO",
         sub_title: "Personal letter for The Rottens DAO & RV Community.",
-        description: "I wrote this letter"
+        description: "I wrote this letter",
+        color: "#d9d3bd"
     },
     council: {
         title: "MEMBERS & COUNCIL",
         sub_title: "Members & Head Members of The Rottens DAO team.",
-        description: "Let's check"
+        description: "Let's check",
+        color: "#d9d3bd"
     },
     committees: {
         title: "COMMITTEES",
         sub_title: "Committees in charge of execute & manage proposals/projects.",
-        description: "Check the list of Committes"
+        description: "Check the list of Committes",
+        color: "#d9d3bd"
     },
     dao: {
         title: "DAO ACTIVITIES",
         sub_title: "DAO's Activities & Misions.",
-        description: "The future of Rotten Ville needs our help"
+        description: "The future of Rotten Ville needs our help",
+        color: "#DED100"
     }
 }
 
 const Body: React.FC<BodyProps> = ({ }) => {
-    const [hover_color, setHoverColor] = useState("#98D864"), [colorModal, setColorModal] = useState("#d9d3be"),
+    const [hover_color, setHoverColor] = useState("#98D864"), [colorModal, setColorModal] = useState("#d9d3b"),
         [visible, setVisible] = useState("opacity-100"), [modalVisible, setModalVisible] = useState("opacity-0 invisible"),
         [contentModalVisible, setContentModalVisible] = useState("opacity-0 invisible"),
         [title, setTitle] = useState("None"), [subTitle, setSubTitle] = useState("None"),
@@ -55,22 +59,25 @@ const Body: React.FC<BodyProps> = ({ }) => {
                 setTitle(contentModal.letter.title);
                 setSubTitle(contentModal.letter.sub_title);
                 setDescription(contentModal.letter.description);
+                setColorModal(contentModal.letter.color)
                 break;
             case "council":
                 setTitle(contentModal.council.title);
                 setSubTitle(contentModal.council.sub_title);
                 setDescription(contentModal.council.description);
+                setColorModal(contentModal.council.color)
                 break;
             case "committees":
                 setTitle(contentModal.committees.title);
                 setSubTitle(contentModal.committees.sub_title);
                 setDescription(contentModal.committees.description);
+                setColorModal(contentModal.committees.color)
                 break;
             case "dao":
                 setTitle(contentModal.dao.title);
                 setSubTitle(contentModal.dao.sub_title);
                 setDescription(contentModal.dao.description);
-                setColorModal("bg-y");
+                setColorModal(contentModal.dao.color);
                 break;
             default:
                 break;
@@ -170,7 +177,7 @@ useEffect(() => {
 
                         <div className={`${modalVisible} transition-[opacity] ease-in-out duration-700 absolute w-[100%] left-0 md:left-auto  md:w-[78.37%] lg:w-[79.37%] h-[34rem] max-w-[1067px] flex flex-wrap`}>
                             <div className='w-full m-2 flex flex-col'>
-                                <div className={`w-full text-[#0F0D00] h-full border rounded-sm bg-modal-color hover:cursor-pointer`}>
+                                <div className={`w-full text-[#0F0D00] h-full border rounded-sm bg-[${colorModal}]  hover:cursor-pointer`}>
                                     <div className={`${contentModalVisible} transition-[opacity] ease-in-out duration-700  h-full w-full`}>
                                         <div onClick={() => hidde()} className='relative z-10 left-[94%] sm:left-[96%] md:left-[96%] lg:left-[97%] top-[3%] w-4 hover:cursor-pointer'><FaTimes /></div>
 
