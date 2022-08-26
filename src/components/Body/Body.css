@@ -7,15 +7,8 @@
   transition: border 0.3s !important;
 }
 
-.bg-modal-color {
-  --bg-color: #d9d3bd;
-  background-color: --bg-color !important;
-}
 .color-text {
   color: #d9d3bd;
-}
-.bg-y {
-  --bg-color: #DED100 !important;
 }
 
 .font-strech {

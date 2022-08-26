@@ -71,8 +71,8 @@ const Header: React.FC<HeaderProps> = ({ }) => {
             </div >
             <div className='z-[63] fixed w-full mt-[4rem] h-[1.6rem] flex items-center px-4 bg-[#14130c] text-[#b0ab99]'>
                 <div className='justify-start flex ml-1'>
-                    <a href="https://realms.today/dao/CBATcY1CSLvrjziKKAuFLK1qki53EBuE6AYw4voNSD5f" target={"_blank"} className='text-[0.7rem] ml-3 flex hover:text-[#98D864]'><FaRadiation className='mt-[0.08rem] mr-1' /> On chain - The Rottens DAO</a>
-                    <a href="https://magiceden.io/creators/rotten_ville" target={"_blank"} className='text-[0.7rem] ml-3 flex hover:text-[#98D864]'>Become a Rotten</a>
+                    <a href="https://realms.today/dao/CBATcY1CSLvrjziKKAuFLK1qki53EBuE6AYw4voNSD5f" target={"_blank"} className='text-[0.7rem] ml-3 flex hover:text-[#98D864]'><FaRadiation className='mt-[0.08rem] mr-1' /> The Rottens DAO |</a>
+                    <a href="https://magiceden.io/creators/rotten_ville" target={"_blank"} className='text-[0.7rem] ml-1 flex hover:text-[#98D864]'>| Become a Rotten</a>
                 </div>
                 <div className='absolute right-4 md:right-8 flex'>
                     <a href="https://twitter.com/TheRottensDAO" target={"_blank"} className='text-[0.7rem] ml-3 flex hover:text-[#98D864]'><FaTwitter /></a>
